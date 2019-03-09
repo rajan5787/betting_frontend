@@ -1,0 +1,11 @@
+<div>
+        <div *ngFor="let race of races;let i=index" [hidden]="(i%3)>0">
+            <div *ngIf="i%3==0" class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3" *ngIf="i<races.length"><app-racing-card [race]="races[i]" (click)="OnSelectRace(races[i])"></app-racing-card></div>
+                <div class="col-md-3" *ngIf="i+1<races.length"><app-racing-card [race]="races[i+1]" (click)="OnSelectRace(races[i+1])"></app-racing-card></div>
+                <div class="col-md-3" *ngIf="i+2<races.length"><app-racing-card [race]="races[i+2]" (click)="OnSelectRace(races[i+2])"></app-racing-card></div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,27 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col" style="text-align:center">Race id: {{race.raceId}}</th>
+        <th scope="col" style="text-align:center">Race Name: ABC</th>
+        <th scope="col" style="text-align:center">Start time: {{race.raceStartTime}}</th>
+        <th scope="col" style="text-align:center">End time: 06:30:00</th>
+      </tr>
+      <tr class="table-primary">
+          <td>Horse Id</td>
+          <td>Hourse Name</td>
+          <td>Odds</td>
+          <td>Action</td>
+      </tr>
+    </thead>
+
+    <tbody>
+       
+        <tr class="table-success" *ngFor="let horse of horses">
+            <td>{{horse.horseId}}</td>
+            <td>{{horse.horseName}}</td>
+            <td>{{horse.odds}}</td>
+            <td><button type="button" class="btn btn-info">Place Bet</button></td>
+          </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,16 @@
+<div id="qrCard" class="card">
+    <div class="card-body row">
+      <div class="col-md-6">
+          <h5 class="card-title">Scan this QR code to login:</h5>
+          <br>  
+          <ol>
+            <li>Open betting app on you phone</li><br>
+            <li>Open scanner option from app</li><br>
+            <li>Point at QR code to scan this code</li>
+          </ol>
+      </div>
+      <div class="col-md-6">
+          <qrcode [qrdata]="qrCode" [size]="256" [level]="'M'"></qrcode>
+      </div>
+    </div>
+  </div>
